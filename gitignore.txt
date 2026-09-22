@@ -1,0 +1,13 @@
+target
+.classpath
+.project
+.settings
+*~
+*.swp
+*.swo
+tests/.*
+.idea
+*.iml
+
+
+
