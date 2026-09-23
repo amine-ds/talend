@@ -153,45 +153,45 @@ public class test implements TalendJob {
 
 		public void synchronizeContext() {
 
-			if (local_Login != null) {
+			if (connection_local_Login != null) {
 
-				this.setProperty("local_Login", local_Login.toString());
-
-			}
-
-			if (local_Database != null) {
-
-				this.setProperty("local_Database", local_Database.toString());
+				this.setProperty("connection_local_Login", connection_local_Login.toString());
 
 			}
 
-			if (local_Port != null) {
+			if (connection_local_Database != null) {
 
-				this.setProperty("local_Port", local_Port.toString());
-
-			}
-
-			if (local_Password != null) {
-
-				this.setProperty("local_Password", local_Password.toString());
+				this.setProperty("connection_local_Database", connection_local_Database.toString());
 
 			}
 
-			if (local_AdditionalParams != null) {
+			if (connection_local_Port != null) {
 
-				this.setProperty("local_AdditionalParams", local_AdditionalParams.toString());
-
-			}
-
-			if (local_Schema != null) {
-
-				this.setProperty("local_Schema", local_Schema.toString());
+				this.setProperty("connection_local_Port", connection_local_Port.toString());
 
 			}
 
-			if (local_Server != null) {
+			if (connection_local_Password != null) {
 
-				this.setProperty("local_Server", local_Server.toString());
+				this.setProperty("connection_local_Password", connection_local_Password.toString());
+
+			}
+
+			if (connection_local_AdditionalParams != null) {
+
+				this.setProperty("connection_local_AdditionalParams", connection_local_AdditionalParams.toString());
+
+			}
+
+			if (connection_local_Schema != null) {
+
+				this.setProperty("connection_local_Schema", connection_local_Schema.toString());
+
+			}
+
+			if (connection_local_Server != null) {
+
+				this.setProperty("connection_local_Server", connection_local_Server.toString());
 
 			}
 
@@ -206,46 +206,46 @@ public class test implements TalendJob {
 			return origin_value;
 		}
 
-		public String local_Login;
+		public String connection_local_Login;
 
-		public String getLocal_Login() {
-			return this.local_Login;
+		public String getConnection_local_Login() {
+			return this.connection_local_Login;
 		}
 
-		public String local_Database;
+		public String connection_local_Database;
 
-		public String getLocal_Database() {
-			return this.local_Database;
+		public String getConnection_local_Database() {
+			return this.connection_local_Database;
 		}
 
-		public String local_Port;
+		public String connection_local_Port;
 
-		public String getLocal_Port() {
-			return this.local_Port;
+		public String getConnection_local_Port() {
+			return this.connection_local_Port;
 		}
 
-		public java.lang.String local_Password;
+		public java.lang.String connection_local_Password;
 
-		public java.lang.String getLocal_Password() {
-			return this.local_Password;
+		public java.lang.String getConnection_local_Password() {
+			return this.connection_local_Password;
 		}
 
-		public String local_AdditionalParams;
+		public String connection_local_AdditionalParams;
 
-		public String getLocal_AdditionalParams() {
-			return this.local_AdditionalParams;
+		public String getConnection_local_AdditionalParams() {
+			return this.connection_local_AdditionalParams;
 		}
 
-		public String local_Schema;
+		public String connection_local_Schema;
 
-		public String getLocal_Schema() {
-			return this.local_Schema;
+		public String getConnection_local_Schema() {
+			return this.connection_local_Schema;
 		}
 
-		public String local_Server;
+		public String connection_local_Server;
 
-		public String getLocal_Server() {
-			return this.local_Server;
+		public String getConnection_local_Server() {
+			return this.connection_local_Server;
 		}
 	}
 
@@ -2473,7 +2473,7 @@ public class test implements TalendJob {
 
 		final boolean execStat = this.execStat;
 
-		mdc("tDBInput_2", "HxH7zE_");
+		mdc("tDBInput_2", "IZdFPF_");
 
 		String iterateId = "";
 
@@ -2517,25 +2517,24 @@ public class test implements TalendJob {
 							log4jParamters_tDBOutput_1.append(" | ");
 							log4jParamters_tDBOutput_1.append("DRIVER" + " = " + "MSSQL_PROP");
 							log4jParamters_tDBOutput_1.append(" | ");
-							log4jParamters_tDBOutput_1.append("HOST" + " = " + "context.local_Server");
+							log4jParamters_tDBOutput_1.append("HOST" + " = " + "context.connection_local_Server");
 							log4jParamters_tDBOutput_1.append(" | ");
-							log4jParamters_tDBOutput_1.append("PORT" + " = " + "context.local_Port");
+							log4jParamters_tDBOutput_1.append("PORT" + " = " + "context.connection_local_Port");
 							log4jParamters_tDBOutput_1.append(" | ");
-							log4jParamters_tDBOutput_1.append("DB_SCHEMA" + " = " + "context.local_Schema");
+							log4jParamters_tDBOutput_1.append("DB_SCHEMA" + " = " + "context.connection_local_Schema");
 							log4jParamters_tDBOutput_1.append(" | ");
-							log4jParamters_tDBOutput_1.append("DBNAME" + " = " + "context.local_Database");
+							log4jParamters_tDBOutput_1.append("DBNAME" + " = " + "context.connection_local_Database");
 							log4jParamters_tDBOutput_1.append(" | ");
-							log4jParamters_tDBOutput_1.append("USER" + " = " + "context.local_Login");
+							log4jParamters_tDBOutput_1.append("USER" + " = " + "context.connection_local_Login");
 							log4jParamters_tDBOutput_1.append(" | ");
 							log4jParamters_tDBOutput_1.append("PASS" + " = "
-									+ String.valueOf(
-											routines.system.PasswordEncryptUtil.encryptPassword(context.local_Password))
-											.substring(0, 4)
+									+ String.valueOf(routines.system.PasswordEncryptUtil
+											.encryptPassword(context.connection_local_Password)).substring(0, 4)
 									+ "...");
 							log4jParamters_tDBOutput_1.append(" | ");
 							log4jParamters_tDBOutput_1.append("TABLE" + " = " + "\"sales_test\"");
 							log4jParamters_tDBOutput_1.append(" | ");
-							log4jParamters_tDBOutput_1.append("TABLE_ACTION" + " = " + "CREATE_IF_NOT_EXISTS");
+							log4jParamters_tDBOutput_1.append("TABLE_ACTION" + " = " + "DROP_IF_EXISTS_AND_CREATE");
 							log4jParamters_tDBOutput_1.append(" | ");
 							log4jParamters_tDBOutput_1.append("IDENTITY_INSERT" + " = " + "false");
 							log4jParamters_tDBOutput_1.append(" | ");
@@ -2547,7 +2546,8 @@ public class test implements TalendJob {
 							log4jParamters_tDBOutput_1.append(" | ");
 							log4jParamters_tDBOutput_1.append("DIE_ON_ERROR" + " = " + "false");
 							log4jParamters_tDBOutput_1.append(" | ");
-							log4jParamters_tDBOutput_1.append("PROPERTIES" + " = " + "context.local_AdditionalParams");
+							log4jParamters_tDBOutput_1
+									.append("PROPERTIES" + " = " + "context.connection_local_AdditionalParams");
 							log4jParamters_tDBOutput_1.append(" | ");
 							log4jParamters_tDBOutput_1.append("ACTIVE_DIR_AUTH" + " = " + "false");
 							log4jParamters_tDBOutput_1.append(" | ");
@@ -2612,26 +2612,26 @@ public class test implements TalendJob {
 
 				java.sql.Connection conn_tDBOutput_1 = null;
 				String dbUser_tDBOutput_1 = null;
-				dbschema_tDBOutput_1 = context.local_Schema;
+				dbschema_tDBOutput_1 = context.connection_local_Schema;
 				String driverClass_tDBOutput_1 = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
 
 				if (log.isDebugEnabled())
 					log.debug("tDBOutput_1 - " + ("Driver ClassName: ") + (driverClass_tDBOutput_1) + ("."));
 				java.lang.Class.forName(driverClass_tDBOutput_1);
-				String port_tDBOutput_1 = context.local_Port;
-				String dbname_tDBOutput_1 = context.local_Database;
-				String url_tDBOutput_1 = "jdbc:sqlserver://" + context.local_Server;
+				String port_tDBOutput_1 = context.connection_local_Port;
+				String dbname_tDBOutput_1 = context.connection_local_Database;
+				String url_tDBOutput_1 = "jdbc:sqlserver://" + context.connection_local_Server;
 				if (!"".equals(port_tDBOutput_1)) {
-					url_tDBOutput_1 += ":" + context.local_Port;
+					url_tDBOutput_1 += ":" + context.connection_local_Port;
 				}
 				if (!"".equals(dbname_tDBOutput_1)) {
-					url_tDBOutput_1 += ";databaseName=" + context.local_Database;
+					url_tDBOutput_1 += ";databaseName=" + context.connection_local_Database;
 
 				}
-				url_tDBOutput_1 += ";appName=" + projectName + ";" + context.local_AdditionalParams;
-				dbUser_tDBOutput_1 = context.local_Login;
+				url_tDBOutput_1 += ";appName=" + projectName + ";" + context.connection_local_AdditionalParams;
+				dbUser_tDBOutput_1 = context.connection_local_Login;
 
-				final String decryptedPassword_tDBOutput_1 = context.local_Password;
+				final String decryptedPassword_tDBOutput_1 = context.connection_local_Password;
 
 				String dbPwd_tDBOutput_1 = decryptedPassword_tDBOutput_1;
 				if (log.isDebugEnabled())
@@ -2672,17 +2672,26 @@ public class test implements TalendJob {
 						whetherExist_tDBOutput_1 = false;
 					}
 				}
-				if (!whetherExist_tDBOutput_1) {
-					try (java.sql.Statement stmtCreate_tDBOutput_1 = conn_tDBOutput_1.createStatement()) {
+				if (whetherExist_tDBOutput_1) {
+					try (java.sql.Statement stmtDrop_tDBOutput_1 = conn_tDBOutput_1.createStatement()) {
 						if (log.isDebugEnabled())
-							log.debug("tDBOutput_1 - " + ("Creating") + (" table '")
+							log.debug("tDBOutput_1 - " + ("Dropping") + (" table '")
 									+ ("[" + tableName_tDBOutput_1 + "]") + ("'."));
-						stmtCreate_tDBOutput_1.execute("CREATE TABLE [" + tableName_tDBOutput_1
-								+ "]([SalesOrderID] INT  not null ,[RevisionNumber] TINYINT  not null ,[OrderDate] DATETIME  not null ,[DueDate] DATETIME  not null ,[ShipDate] DATETIME ,[Status] TINYINT  not null ,[OnlineOrderFlag] BIT  not null ,[SalesOrderNumber] NVARCHAR(25)   not null ,[PurchaseOrderNumber] NVARCHAR(25)  ,[AccountNumber] NVARCHAR(15)  ,[CustomerID] INT  not null ,[SalesPersonID] INT ,[TerritoryID] INT ,[BillToAddressID] INT  not null ,[ShipToAddressID] INT  not null ,[ShipMethodID] INT  not null ,[CreditCardID] INT ,[CreditCardApprovalCode] VARCHAR(15)  ,[CurrencyRateID] INT ,[SubTotal] VARCHAR(19)   not null ,[TaxAmt] VARCHAR(19)   not null ,[Freight] VARCHAR(19)   not null ,[TotalDue] VARCHAR(19)   not null ,[Comment] NVARCHAR(128)  ,[rowguid] UNIQUEIDENTIFIER  not null ,[ModifiedDate] DATETIME  not null )");
+						stmtDrop_tDBOutput_1.execute("DROP TABLE [" + tableName_tDBOutput_1 + "]");
 						if (log.isDebugEnabled())
-							log.debug("tDBOutput_1 - " + ("Create") + (" table '") + ("[" + tableName_tDBOutput_1 + "]")
+							log.debug("tDBOutput_1 - " + ("Drop") + (" table '") + ("[" + tableName_tDBOutput_1 + "]")
 									+ ("' has succeeded."));
 					}
+				}
+				try (java.sql.Statement stmtCreate_tDBOutput_1 = conn_tDBOutput_1.createStatement()) {
+					if (log.isDebugEnabled())
+						log.debug("tDBOutput_1 - " + ("Creating") + (" table '") + ("[" + tableName_tDBOutput_1 + "]")
+								+ ("'."));
+					stmtCreate_tDBOutput_1.execute("CREATE TABLE [" + tableName_tDBOutput_1
+							+ "]([SalesOrderID] INT  not null ,[RevisionNumber] TINYINT  not null ,[OrderDate] DATETIME  not null ,[DueDate] DATETIME  not null ,[ShipDate] DATETIME ,[Status] TINYINT  not null ,[OnlineOrderFlag] BIT  not null ,[SalesOrderNumber] NVARCHAR(25)   not null ,[PurchaseOrderNumber] NVARCHAR(25)  ,[AccountNumber] NVARCHAR(15)  ,[CustomerID] INT  not null ,[SalesPersonID] INT ,[TerritoryID] INT ,[BillToAddressID] INT  not null ,[ShipToAddressID] INT  not null ,[ShipMethodID] INT  not null ,[CreditCardID] INT ,[CreditCardApprovalCode] VARCHAR(15)  ,[CurrencyRateID] INT ,[SubTotal] VARCHAR(19)   not null ,[TaxAmt] VARCHAR(19)   not null ,[Freight] VARCHAR(19)   not null ,[TotalDue] VARCHAR(19)   not null ,[Comment] NVARCHAR(128)  ,[rowguid] UNIQUEIDENTIFIER  not null ,[ModifiedDate] DATETIME  not null )");
+					if (log.isDebugEnabled())
+						log.debug("tDBOutput_1 - " + ("Create") + (" table '") + ("[" + tableName_tDBOutput_1 + "]")
+								+ ("' has succeeded."));
 				}
 				java.sql.PreparedStatement pstmt_tDBOutput_1 = null;
 				java.sql.PreparedStatement pstmtInsert_tDBOutput_1 = null;
@@ -2717,22 +2726,21 @@ public class test implements TalendJob {
 							log4jParamters_tDBInput_2.append("Parameters:");
 							log4jParamters_tDBInput_2.append("USE_EXISTING_CONNECTION" + " = " + "false");
 							log4jParamters_tDBInput_2.append(" | ");
-							log4jParamters_tDBInput_2.append("HOST" + " = " + "context.local_Server");
+							log4jParamters_tDBInput_2.append("HOST" + " = " + "context.connection_local_Server");
 							log4jParamters_tDBInput_2.append(" | ");
 							log4jParamters_tDBInput_2.append("DRIVER" + " = " + "MSSQL_PROP");
 							log4jParamters_tDBInput_2.append(" | ");
-							log4jParamters_tDBInput_2.append("PORT" + " = " + "context.local_Port");
+							log4jParamters_tDBInput_2.append("PORT" + " = " + "context.connection_local_Port");
 							log4jParamters_tDBInput_2.append(" | ");
-							log4jParamters_tDBInput_2.append("DB_SCHEMA" + " = " + "context.local_Schema");
+							log4jParamters_tDBInput_2.append("DB_SCHEMA" + " = " + "context.connection_local_Schema");
 							log4jParamters_tDBInput_2.append(" | ");
-							log4jParamters_tDBInput_2.append("DBNAME" + " = " + "context.local_Database");
+							log4jParamters_tDBInput_2.append("DBNAME" + " = " + "context.connection_local_Database");
 							log4jParamters_tDBInput_2.append(" | ");
-							log4jParamters_tDBInput_2.append("USER" + " = " + "context.local_Login");
+							log4jParamters_tDBInput_2.append("USER" + " = " + "context.connection_local_Login");
 							log4jParamters_tDBInput_2.append(" | ");
 							log4jParamters_tDBInput_2.append("PASS" + " = "
-									+ String.valueOf(
-											routines.system.PasswordEncryptUtil.encryptPassword(context.local_Password))
-											.substring(0, 4)
+									+ String.valueOf(routines.system.PasswordEncryptUtil
+											.encryptPassword(context.connection_local_Password)).substring(0, 4)
 									+ "...");
 							log4jParamters_tDBInput_2.append(" | ");
 							log4jParamters_tDBInput_2.append("TABLE" + " = " + "\"SalesOrderHeader\"");
@@ -2740,11 +2748,12 @@ public class test implements TalendJob {
 							log4jParamters_tDBInput_2.append("QUERYSTORE" + " = " + "\"\"");
 							log4jParamters_tDBInput_2.append(" | ");
 							log4jParamters_tDBInput_2.append("QUERY" + " = "
-									+ "\"SELECT \\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.SalesOrderID, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.RevisionNumber, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.OrderDate, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.DueDate, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.ShipDate, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.Status, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.OnlineOrderFlag, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.SalesOrderNumber, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.PurchaseOrderNumber, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.AccountNumber, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.CustomerID, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.SalesPersonID, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.TerritoryID, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.BillToAddressID, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.ShipToAddressID, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.ShipMethodID, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.CreditCardID, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.CreditCardApprovalCode, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.CurrencyRateID, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.SubTotal, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.TaxAmt, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.Freight, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.TotalDue, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.Comment, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.rowguid, 		\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader.ModifiedDate\" +\" FROM	\\\"\"+context.local_Schema+\"\\\".SalesOrderHeader\"");
+									+ "\"SELECT \\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.SalesOrderID, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.RevisionNumber, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.OrderDate, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.DueDate, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.ShipDate, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.Status, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.OnlineOrderFlag, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.SalesOrderNumber, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.PurchaseOrderNumber, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.AccountNumber, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.CustomerID, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.SalesPersonID, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.TerritoryID, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.BillToAddressID, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.ShipToAddressID, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.ShipMethodID, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.CreditCardID, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.CreditCardApprovalCode, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.CurrencyRateID, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.SubTotal, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.TaxAmt, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.Freight, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.TotalDue, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.Comment, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.rowguid, 		\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader.ModifiedDate\" +\" FROM	\\\"\"+context.connection_local_Schema+\"\\\".SalesOrderHeader\"");
 							log4jParamters_tDBInput_2.append(" | ");
 							log4jParamters_tDBInput_2.append("SPECIFY_DATASOURCE_ALIAS" + " = " + "false");
 							log4jParamters_tDBInput_2.append(" | ");
-							log4jParamters_tDBInput_2.append("PROPERTIES" + " = " + "context.local_AdditionalParams");
+							log4jParamters_tDBInput_2
+									.append("PROPERTIES" + " = " + "context.connection_local_AdditionalParams");
 							log4jParamters_tDBInput_2.append(" | ");
 							log4jParamters_tDBInput_2.append("ACTIVE_DIR_AUTH" + " = " + "false");
 							log4jParamters_tDBInput_2.append(" | ");
@@ -2804,23 +2813,23 @@ public class test implements TalendJob {
 				java.sql.Connection conn_tDBInput_2 = null;
 				String driverClass_tDBInput_2 = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
 				java.lang.Class jdbcclazz_tDBInput_2 = java.lang.Class.forName(driverClass_tDBInput_2);
-				String dbUser_tDBInput_2 = context.local_Login;
+				String dbUser_tDBInput_2 = context.connection_local_Login;
 
-				final String decryptedPassword_tDBInput_2 = context.local_Password;
+				final String decryptedPassword_tDBInput_2 = context.connection_local_Password;
 
 				String dbPwd_tDBInput_2 = decryptedPassword_tDBInput_2;
 
-				String port_tDBInput_2 = context.local_Port;
-				String dbname_tDBInput_2 = context.local_Database;
-				String url_tDBInput_2 = "jdbc:sqlserver://" + context.local_Server;
+				String port_tDBInput_2 = context.connection_local_Port;
+				String dbname_tDBInput_2 = context.connection_local_Database;
+				String url_tDBInput_2 = "jdbc:sqlserver://" + context.connection_local_Server;
 				if (!"".equals(port_tDBInput_2)) {
-					url_tDBInput_2 += ":" + context.local_Port;
+					url_tDBInput_2 += ":" + context.connection_local_Port;
 				}
 				if (!"".equals(dbname_tDBInput_2)) {
-					url_tDBInput_2 += ";databaseName=" + context.local_Database;
+					url_tDBInput_2 += ";databaseName=" + context.connection_local_Database;
 				}
-				url_tDBInput_2 += ";appName=" + projectName + ";" + context.local_AdditionalParams;
-				String dbschema_tDBInput_2 = context.local_Schema;
+				url_tDBInput_2 += ";appName=" + projectName + ";" + context.connection_local_AdditionalParams;
+				String dbschema_tDBInput_2 = context.connection_local_Schema;
 
 				log.debug("tDBInput_2 - Driver ClassName: " + driverClass_tDBInput_2 + ".");
 
@@ -2833,33 +2842,33 @@ public class test implements TalendJob {
 
 				java.sql.Statement stmt_tDBInput_2 = conn_tDBInput_2.createStatement();
 
-				String dbquery_tDBInput_2 = "SELECT \"" + context.local_Schema
-						+ "\".SalesOrderHeader.SalesOrderID,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.RevisionNumber,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.OrderDate,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.DueDate,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.ShipDate,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.Status,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.OnlineOrderFlag,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.SalesOrderNumber,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.PurchaseOrderNumber,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.AccountNumber,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.CustomerID,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.SalesPersonID,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.TerritoryID,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.BillToAddressID,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.ShipToAddressID,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.ShipMethodID,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.CreditCardID,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.CreditCardApprovalCode,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.CurrencyRateID,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.SubTotal,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.TaxAmt,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.Freight,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.TotalDue,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.Comment,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.rowguid,\n		\"" + context.local_Schema
-						+ "\".SalesOrderHeader.ModifiedDate" + "\nFROM	\"" + context.local_Schema
+				String dbquery_tDBInput_2 = "SELECT \"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.SalesOrderID,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.RevisionNumber,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.OrderDate,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.DueDate,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.ShipDate,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.Status,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.OnlineOrderFlag,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.SalesOrderNumber,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.PurchaseOrderNumber,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.AccountNumber,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.CustomerID,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.SalesPersonID,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.TerritoryID,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.BillToAddressID,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.ShipToAddressID,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.ShipMethodID,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.CreditCardID,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.CreditCardApprovalCode,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.CurrencyRateID,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.SubTotal,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.TaxAmt,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.Freight,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.TotalDue,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.Comment,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.rowguid,\n		\"" + context.connection_local_Schema
+						+ "\".SalesOrderHeader.ModifiedDate" + "\nFROM	\"" + context.connection_local_Schema
 						+ "\".SalesOrderHeader";
 
 				log.debug("tDBInput_2 - Executing the query: '" + dbquery_tDBInput_2 + "'.");
@@ -4118,7 +4127,7 @@ public class test implements TalendJob {
 		org.slf4j.MDC.put("_startTimestamp", java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)
 				.format(java.time.format.DateTimeFormatter.ISO_INSTANT));
 		org.slf4j.MDC.put("_jobRepositoryId", "_RPNKQLbKEfGIZvUIz3EKyQ");
-		org.slf4j.MDC.put("_compiledAtTimestamp", "2026-09-23T07:45:19.300809Z");
+		org.slf4j.MDC.put("_compiledAtTimestamp", "2026-09-23T07:56:49.153017900Z");
 
 		java.lang.management.RuntimeMXBean mx = java.lang.management.ManagementFactory.getRuntimeMXBean();
 		String[] mxNameTable = mx.getName().split("@"); //$NON-NLS-1$
@@ -4284,63 +4293,65 @@ public class test implements TalendJob {
 			}
 			class ContextProcessing {
 				private void processContext_0() {
-					context.setContextType("local_Login", "id_String");
-					if (context.getStringValue("local_Login") == null) {
-						context.local_Login = null;
+					context.setContextType("connection_local_Login", "id_String");
+					if (context.getStringValue("connection_local_Login") == null) {
+						context.connection_local_Login = null;
 					} else {
-						context.local_Login = (String) context.getProperty("local_Login");
+						context.connection_local_Login = (String) context.getProperty("connection_local_Login");
 					}
-					context.setContextType("local_Database", "id_String");
-					if (context.getStringValue("local_Database") == null) {
-						context.local_Database = null;
+					context.setContextType("connection_local_Database", "id_String");
+					if (context.getStringValue("connection_local_Database") == null) {
+						context.connection_local_Database = null;
 					} else {
-						context.local_Database = (String) context.getProperty("local_Database");
+						context.connection_local_Database = (String) context.getProperty("connection_local_Database");
 					}
-					context.setContextType("local_Port", "id_String");
-					if (context.getStringValue("local_Port") == null) {
-						context.local_Port = null;
+					context.setContextType("connection_local_Port", "id_String");
+					if (context.getStringValue("connection_local_Port") == null) {
+						context.connection_local_Port = null;
 					} else {
-						context.local_Port = (String) context.getProperty("local_Port");
+						context.connection_local_Port = (String) context.getProperty("connection_local_Port");
 					}
-					context.setContextType("local_Password", "id_Password");
-					if (context.getStringValue("local_Password") == null) {
-						context.local_Password = null;
+					context.setContextType("connection_local_Password", "id_Password");
+					if (context.getStringValue("connection_local_Password") == null) {
+						context.connection_local_Password = null;
 					} else {
-						String pwd_local_Password_value = context.getProperty("local_Password");
-						context.local_Password = null;
-						if (pwd_local_Password_value != null) {
-							if (context_param.containsKey("local_Password")) {// no need to decrypt if it come from
-																				// program argument or parent job
-																				// runtime
-								context.local_Password = pwd_local_Password_value;
-							} else if (!pwd_local_Password_value.isEmpty()) {
+						String pwd_connection_local_Password_value = context.getProperty("connection_local_Password");
+						context.connection_local_Password = null;
+						if (pwd_connection_local_Password_value != null) {
+							if (context_param.containsKey("connection_local_Password")) {// no need to decrypt if it
+																							// come from program
+																							// argument or parent job
+																							// runtime
+								context.connection_local_Password = pwd_connection_local_Password_value;
+							} else if (!pwd_connection_local_Password_value.isEmpty()) {
 								try {
-									context.local_Password = routines.system.PasswordEncryptUtil
-											.decryptPassword(pwd_local_Password_value);
-									context.put("local_Password", context.local_Password);
+									context.connection_local_Password = routines.system.PasswordEncryptUtil
+											.decryptPassword(pwd_connection_local_Password_value);
+									context.put("connection_local_Password", context.connection_local_Password);
 								} catch (java.lang.RuntimeException e) {
 									// do nothing
 								}
 							}
 						}
 					}
-					context.setContextType("local_AdditionalParams", "id_String");
-					if (context.getStringValue("local_AdditionalParams") == null) {
-						context.local_AdditionalParams = null;
+					context.setContextType("connection_local_AdditionalParams", "id_String");
+					if (context.getStringValue("connection_local_AdditionalParams") == null) {
+						context.connection_local_AdditionalParams = null;
 					} else {
-						context.local_AdditionalParams = (String) context.getProperty("local_AdditionalParams");
+						context.connection_local_AdditionalParams = (String) context
+								.getProperty("connection_local_AdditionalParams");
 					}
-					context.setContextType("local_Schema", "id_String");
-					if (context.getStringValue("local_Schema") == null) {
-						context.local_Schema = null;
+					context.setContextType("connection_local_Schema", "id_String");
+					if (context.getStringValue("connection_local_Schema") == null) {
+						context.connection_local_Schema = null;
 					} else {
-						context.local_Schema = (String) context.getProperty("local_Schema");
+						context.connection_local_Schema = (String) context.getProperty("connection_local_Schema");
 					}
-					context.setContextType("local_Server", "id_String");
-					if (context.getStringValue("local_Server") == null) {
-						context.local_Server = null;
+					context.setContextType("connection_local_Server", "id_String");
+					if (context.getStringValue("connection_local_Server") == null) {
+						context.connection_local_Server = null;
 					} else {
-						context.local_Server = (String) context.getProperty("local_Server");
+						context.connection_local_Server = (String) context.getProperty("connection_local_Server");
 					}
 				}
 
@@ -4357,26 +4368,28 @@ public class test implements TalendJob {
 
 		// get context value from parent directly
 		if (parentContextMap != null && !parentContextMap.isEmpty()) {
-			if (parentContextMap.containsKey("local_Login")) {
-				context.local_Login = (String) parentContextMap.get("local_Login");
+			if (parentContextMap.containsKey("connection_local_Login")) {
+				context.connection_local_Login = (String) parentContextMap.get("connection_local_Login");
 			}
-			if (parentContextMap.containsKey("local_Database")) {
-				context.local_Database = (String) parentContextMap.get("local_Database");
+			if (parentContextMap.containsKey("connection_local_Database")) {
+				context.connection_local_Database = (String) parentContextMap.get("connection_local_Database");
 			}
-			if (parentContextMap.containsKey("local_Port")) {
-				context.local_Port = (String) parentContextMap.get("local_Port");
+			if (parentContextMap.containsKey("connection_local_Port")) {
+				context.connection_local_Port = (String) parentContextMap.get("connection_local_Port");
 			}
-			if (parentContextMap.containsKey("local_Password")) {
-				context.local_Password = (java.lang.String) parentContextMap.get("local_Password");
+			if (parentContextMap.containsKey("connection_local_Password")) {
+				context.connection_local_Password = (java.lang.String) parentContextMap
+						.get("connection_local_Password");
 			}
-			if (parentContextMap.containsKey("local_AdditionalParams")) {
-				context.local_AdditionalParams = (String) parentContextMap.get("local_AdditionalParams");
+			if (parentContextMap.containsKey("connection_local_AdditionalParams")) {
+				context.connection_local_AdditionalParams = (String) parentContextMap
+						.get("connection_local_AdditionalParams");
 			}
-			if (parentContextMap.containsKey("local_Schema")) {
-				context.local_Schema = (String) parentContextMap.get("local_Schema");
+			if (parentContextMap.containsKey("connection_local_Schema")) {
+				context.connection_local_Schema = (String) parentContextMap.get("connection_local_Schema");
 			}
-			if (parentContextMap.containsKey("local_Server")) {
-				context.local_Server = (String) parentContextMap.get("local_Server");
+			if (parentContextMap.containsKey("connection_local_Server")) {
+				context.connection_local_Server = (String) parentContextMap.get("connection_local_Server");
 			}
 		}
 
@@ -4386,7 +4399,7 @@ public class test implements TalendJob {
 		resumeUtil.initCommonInfo(pid, rootPid, fatherPid, projectName, jobName, contextStr, jobVersion);
 
 		List<String> parametersToEncrypt = new java.util.ArrayList<String>();
-		parametersToEncrypt.add("local_Password");
+		parametersToEncrypt.add("connection_local_Password");
 		// Resume: jobStart
 		resumeUtil.addLog("JOB_STARTED", "JOB:" + jobName, parent_part_launcher, Thread.currentThread().getId() + "",
 				"", "", "", "", resumeUtil.convertToJsonText(context, ContextProperties.class, parametersToEncrypt));
@@ -4648,6 +4661,6 @@ public class test implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 147591 characters generated by Qlik Talend Cloud Enterprise Edition on the 23
- * septembre 2026 à 09:45:19 CEST
+ * 150349 characters generated by Qlik Talend Cloud Enterprise Edition on the 23
+ * septembre 2026 à 09:56:49 CEST
  ************************************************************************************************/

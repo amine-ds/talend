@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_sPi4kLchEfGIZvUIz3EKyQ" confirmationNeeded="false" hide="false" name="Default">
+    <contextParameter xmi:id="_sPi4kbchEfGIZvUIz3EKyQ" comment="" name="connection_local_Login" prompt="connection_local_Login?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="IICS_SQL"/>
+    <contextParameter xmi:id="_sPi4krchEfGIZvUIz3EKyQ" comment="" name="connection_local_Database" prompt="connection_local_Database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="AdventureWorks2019"/>
+    <contextParameter xmi:id="_sPi4k7chEfGIZvUIz3EKyQ" comment="" name="connection_local_Port" prompt="connection_local_Port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="1433"/>
+    <contextParameter xmi:id="_sPjfoLchEfGIZvUIz3EKyQ" comment="" name="connection_local_Password" prompt="connection_local_Password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:087AXVwCXnoFTkIom0JM6Zag9v8TNisov+CMDxwDLiw/JyCH"/>
+    <contextParameter xmi:id="_sPjfobchEfGIZvUIz3EKyQ" comment="" name="connection_local_AdditionalParams" prompt="connection_local_AdditionalParams?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_sPjforchEfGIZvUIz3EKyQ" comment="" name="connection_local_Schema" prompt="connection_local_Schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="Sales"/>
+    <contextParameter xmi:id="_sPjfo7chEfGIZvUIz3EKyQ" comment="" name="connection_local_Server" prompt="connection_local_Server?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="localhost"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_P2dbwLckEfGIZvUIz3EKyQ" confirmationNeeded="false" hide="false" name="dev">
+    <contextParameter xmi:id="_P2dbwbckEfGIZvUIz3EKyQ" comment="" name="connection_local_Login" prompt="connection_local_Login?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="IICS_SQL"/>
+    <contextParameter xmi:id="_P2dbwrckEfGIZvUIz3EKyQ" comment="" name="connection_local_Database" prompt="connection_local_Database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="AdventureWorks2019"/>
+    <contextParameter xmi:id="_P2dbw7ckEfGIZvUIz3EKyQ" comment="" name="connection_local_Port" prompt="connection_local_Port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="1433"/>
+    <contextParameter xmi:id="_P2dbxLckEfGIZvUIz3EKyQ" comment="" name="connection_local_Password" prompt="connection_local_Password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:087AXVwCXnoFTkIom0JM6Zag9v8TNisov+CMDxwDLiw/JyCH"/>
+    <contextParameter xmi:id="_P2dbxbckEfGIZvUIz3EKyQ" comment="" name="connection_local_AdditionalParams" prompt="connection_local_AdditionalParams?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_P2dbxrckEfGIZvUIz3EKyQ" comment="" name="connection_local_Schema" prompt="connection_local_Schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="Sales"/>
+    <contextParameter xmi:id="_P2dbx7ckEfGIZvUIz3EKyQ" comment="" name="connection_local_Server" prompt="connection_local_Server?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="localhost"/>
+  </talendfile:ContextType>
+</xmi:XMI>
